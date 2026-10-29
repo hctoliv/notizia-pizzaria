@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notizia Pizzaria Napoletana · Itaim Bibi</title>
+<meta name="description" content="A verdadeira pizza napoletana, assada em forno a 430 graus numa vila charmosa no Itaim Bibi. Terça a domingo, das 18h à meia-noite.">
+<meta property="og:title" content="Notizia Pizzaria Napoletana">
+<meta property="og:description" content="A verdadeira pizza napoletana no Itaim Bibi. Cada pizza é uma nova notícia.">
+<meta property="og:image" content="img/mesa.jpg">
+<meta name="theme-color" content="#171412">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<!-- intro: o jornal girando -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-paper">
+    <div class="ip-top"><span>Edição da noite</span><span class="js-date-short"></span></div>
+    <img src="img/logo-dark.png" alt="" class="ip-logo">
+    <div class="ip-rule"></div>
+    <p class="ip-extra">Extra! Extra!</p>
+    <p class="ip-head">Forno aceso no Itaim</p>
+    <div class="ip-cols"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+  <button class="intro-skip" type="button">pular</button>
+</div>
+
+<header class="hd" id="hd" data-theme="paper">
+  <a href="#capa" class="hd-logo" aria-label="Notizia, início">
+    <img src="img/logo-dark.png" alt="Notizia Pizzaria & Forneria Napoletana" class="hd-l-dark">
+    <img src="img/logo-light.png" alt="" class="hd-l-light">
+  </a>
+  <nav class="hd-nav" id="nav">
+    <a href="#ispirazione">A notícia</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#casa">A casa</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn-sm hd-cta js-reserva" href="#" target="_blank" rel="noopener">Reservar</a>
+  <button class="hd-burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<main>
+
+<!-- 1. CAPA -->
+<section class="capa" id="capa" data-hd="paper">
+  <div class="capa-stage">
+    <div class="front">
+      <div class="mast">
+        <span class="mast-date js-date"></span>
+        <span class="mast-mid">Itaim Bibi · São Paulo</span>
+        <span class="status js-status"><b></b><em>Forno aceso</em></span>
+      </div>
+      <div class="rule2"></div>
+      <h1 class="headline"><span class="hl-line">A verdadeira pizza</span> <span class="hl-line">napoletana</span></h1>
+      <div class="rule1"></div>
+      <div class="front-grid">
+        <div class="lead-text">
+          <p class="kicker">Ultim'ora</p>
+          <p class="lead-big">Notícia com estilo é tudo.</p>
+          <p class="lead-p">Massa napoletana assada em forno a 430 graus, numa vila charmosa no Itaim Bibi. De terça a domingo, das 18h à meia-noite.</p>
+          <div class="btns">
+            <a class="btn js-reserva" href="#" target="_blank" rel="noopener">Reservar mesa</a>
+            <a class="btn btn-ghost" href="#cardapio">Ver cardápio</a>
+          </div>
+        </div>
+        <div class="lead-slot" id="leadSlot"></div>
+        <aside class="indice">
+          <p class="kicker">Nesta edição</p>
+          <ol>
+            <li><a href="#ispirazione"><span>La nostra ispirazione</span><i>p. 2</i></a></li>
+            <li><a href="#forno"><span>Forno a 430 gradi</span><i>p. 3</i></a></li>
+            <li><a href="#cardapio"><span>Cardápio completo</span><i>p. 4</i></a></li>
+            <li><a href="#arquivo"><span>Arquivo da pizza</span><i>p. 5</i></a></li>
+            <li><a href="#casa"><span>Os 3 ambientes</span><i>p. 6</i></a></li>
+            <li><a href="#passatempo"><span>Caça palavras</span><i>p. 7</i></a></li>
+            <li><a href="#eventos"><span>Eventos</span><i>p. 9</i></a></li>
+          </ol>
+        </aside>
+      </div>
+      <div class="ticker" aria-hidden="true"><div class="ticker-track js-ticker"></div></div>
+    </div>
+
+    <!-- foto/vídeo principal que cresce até virar a tela -->
+    <figure class="lead" id="lead">
+      <video class="lead-vid" src="video/lead.mp4" poster="img/poster-lead.jpg" muted loop playsinline autoplay preload="auto"></video>
+      <img class="lead-img" src="img/vila-1.jpg" alt="A vila da Notizia à noite, com varal de luzes">
+      <div class="bulbs" id="bulbs"></div>
+      <figcaption class="lead-cap">Foto do dia: da bancada ao forno</figcaption>
+      <div class="lead-over">
+        <p class="kicker">Espaço externo · Jardim Aurelia</p>
+        <p class="lead-over-t">Uma villa no Itaim,<br>ao ar livre.</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- 2. ISPIRAZIONE -->
+<section class="sec paper ispira" id="ispirazione" data-hd="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-n">p. 2</span>
+      <span class="kicker">Sobre nós</span>
+      <span class="sec-n">La nostra ispirazione</span>
+    </div>
+    <h2 class="h2 reveal">Aqui, cada pizza é uma nova notícia.</h2>
+    <div class="article">
+      <div class="article-cols reveal">
+        <p class="dropcap">Quando surgiu a ideia da Pizzaria Notizia, já a associamos ao jornal impresso. Imaginem conosco a notícia como uma autêntica pizzaria napoletana.</p>
+        <p>A notícia vem dos fatos reais e, para ser contada, precisa ser bem elaborada, clara e objetiva. Da mesma forma, a pizza é cuidadosamente preparada com os melhores e mais frescos ingredientes para ser apreciada.</p>
+        <p>Como um jornal que traz as últimas informações do dia, nossa pizzaria traz as melhores combinações de ingredientes frescos e sabores irresistíveis, que noticiam a experiência da mistura única entre a tradição italiana e a paixão brasileira.</p>
+        <blockquote class="pull">“Cada pizza é uma verdadeira manchete gastronômica a ser compartilhada e celebrada.”</blockquote>
+        <p>Nada mais importante do que a tradição e a autenticidade como ingredientes para compor uma bella pizza e também uma boa notícia. Aliás, ambas têm o poder de unir as pessoas.</p>
+      </div>
+      <figure class="news-photo reveal">
+        <img src="img/pizzaiolo.jpg" alt="Pizzaiolo da Notizia segurando uma pizza napoletana" loading="lazy">
+        <figcaption>Pizzaria e forneria napoletana. Sejam bem-vindos à Notizia.</figcaption>
+      </figure>
+    </div>
+    <div class="strip reveal">
+      <figure><img src="img/parma.jpg" alt="Pizza Parma com figo e balsâmico" loading="lazy"><figcaption>Parma</figcaption></figure>
+      <figure><img src="img/burrata.jpg" alt="Burrata com pesto de pistache e tomate confitado" loading="lazy"><figcaption>Burrata</figcaption></figure>
+      <figure><img src="img/calzone-mesa.jpg" alt="Calzone sobre o jogo americano em forma de jornal" loading="lazy"><figcaption>Calzone</figcaption></figure>
+      <figure><img src="img/bruschetta.jpg" alt="Bruschetta com tomatinho e basilico" loading="lazy"><figcaption>Bruschetta</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3. FORNO -->
+<section class="forno" id="forno" data-hd="night">
+  <div class="forno-stage">
+    <canvas class="embers" id="embers"></canvas>
+    <div class="forno-glow" id="fornoGlow"></div>
+    <div class="forno-inner">
+      <p class="kicker kicker-light">p. 3 · Pizzas assadas em forno a</p>
+      <div class="gradi"><span class="gradi-n" id="gradiN">0</span><span class="gradi-u">gradi</span></div>
+      <div class="thermo"><div class="thermo-bar" id="thermo"></div><div class="thermo-ticks"><span>0°</span><span>100°</span><span>200°</span><span>300°</span><span>430°</span></div></div>
+    </div>
+    <div class="arch">
+      <video src="video/forno.mp4" poster="img/poster-forno.jpg" muted loop playsinline preload="none" class="lazyvid"></video>
+    </div>
+    <p class="forno-note">A borda cresce, o fundo pinta, o basilico perfuma. É assim que a napoletana vira manchete.</p>
+  </div>
+</section>
+
+<!-- 4. CARDÁPIO -->
+<section class="sec paper cardapio" id="cardapio" data-hd="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-n">p. 4</span>
+      <span class="kicker">Nosso menu</span>
+      <span class="sec-n">Edição completa</span>
+    </div>
+    <h2 class="h2 reveal">O cardápio do dia</h2>
+    <div class="tabs" role="tablist">
+      <button role="tab" class="tab is-on" data-cat="pizze" aria-selected="true">Pizze</button>
+      <button role="tab" class="tab" data-cat="antipasti" aria-selected="false">Antipasti</button>
+      <button role="tab" class="tab" data-cat="drinks" aria-selected="false">Drinks</button>
+    </div>
+    <div class="menu-wrap">
+      <div class="menu-list" id="menuList"></div>
+      <aside class="menu-feature" id="menuFeature">
+        <figure><img id="featImg" src="img/parma-2.jpg" alt=""><figcaption id="featCap">Parma</figcaption></figure>
+        <p class="feat-note">Passe o cursor nos itens com <b>●</b> pra ver a foto.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ARQUIVO -->
+<section class="arquivo" id="arquivo" data-hd="night">
+  <div class="arq-stage">
+    <div class="arq-head">
+      <p class="kicker kicker-light">p. 5 · Arquivo histórico</p>
+      <h2 class="h2 h2-light">Toda pizza tem uma história pra contar.</h2>
+      <p class="arq-hint">role para folhear →</p>
+    </div>
+    <div class="arq-track" id="arqTrack">
+      <article class="clip">
+        <span class="clip-y">c. 1700</span><span class="clip-place">Napoli</span>
+        <h3>Nasce a Marinara</h3>
+        <p>Molho de tomate, orégano e azeite. A primeira pizza napoletana da história, até hoje uma das mais consumidas em Napoli.</p>
+        <span class="clip-p">Marinara · R$62</span>
+      </article>
+      <article class="clip clip-img"><img src="img/close-1.jpg" alt="Pizza napoletana recém-saída do forno" loading="lazy"></article>
+      <article class="clip">
+        <span class="clip-y">1889</span><span class="clip-place">Napoli</span>
+        <h3>Uma pizza para a rainha</h3>
+        <p>O pizzaiolo Rafaelle Esposito cria a Margherita em homenagem à rainha Margherita di Savoia. Tomate, mozzarella e basilico: as cores da bandeira da Itália.</p>
+        <span class="clip-p">Marguerita · R$64</span>
+      </article>
+      <article class="clip">
+        <span class="clip-y">1963</span><span class="clip-place">Parma</span>
+        <h3>O presunto ganha um consórcio</h3>
+        <p>Produzido há mais de 2000 anos, o Prosciutto di Parma passa a ser protegido pelo Consorzio. Vem com figo, balsâmico e pimenta preta.</p>
+        <span class="clip-p">Parma · R$76</span>
+      </article>
+      <article class="clip clip-img"><img src="img/parma-2.jpg" alt="Pizza Parma com figo" loading="lazy"></article>
+      <article class="clip">
+        <span class="clip-y">Anos 60</span><span class="clip-place">Brasil</span>
+        <h3>Quatro queijos, um Brasil exigente</h3>
+        <p>Inspirada nas pizzas italianas, a Quattro Formaggi nasce aqui, com uma variedade de queijos para agradar os paladares mais exigentes.</p>
+        <span class="clip-p">Quattro formaggi · R$70</span>
+      </article>
+      <article class="clip">
+        <span class="clip-y">Bixiga</span><span class="clip-place">São Paulo</span>
+        <h3>Calabresa, sotaque paulistano</h3>
+        <p>Criada em São Paulo, na região do Bixiga, inspirada nos tradicionais salames italianos.</p>
+        <span class="clip-p">Calabresa · R$64</span>
+      </article>
+      <article class="clip clip-img"><img src="img/calzone.jpg" alt="Calzone aberto na mão" loading="lazy"></article>
+      <article class="clip clip-now">
+        <span class="clip-y">Hoje</span><span class="clip-place">Itaim Bibi</span>
+        <h3>Toda noite, uma nova edição</h3>
+        <p>Rua Tabapuã, 838, casa 5. Terça a domingo, das 18h à meia-noite.</p>
+        <a class="btn btn-light js-reserva" href="#" target="_blank" rel="noopener">Reservar mesa</a>
+      </article>
+    </div>
+    <div class="arq-bar"><i id="arqBar"></i></div>
+  </div>
+</section>
+
+<!-- 6. A CASA -->
+<section class="casa" id="casa" data-hd="night">
+  <div class="casa-intro">
+    <p class="kicker kicker-light">p. 6 · Ambientes</p>
+    <h2 class="h2 h2-light">Temos 3 ambientes.</h2>
+  </div>
+  <article class="amb amb-1">
+    <img class="amb-bg" src="img/vila-2.jpg" alt="Espaço externo da Notizia com mesas e luzes" loading="lazy">
+    <div class="amb-txt">
+      <span class="amb-n">01</span>
+      <h3>Jardim Aurelia</h3>
+      <p>Espaço externo. Uma villa no Itaim, ao ar livre, com varal de luzes e flores no teto.</p>
+    </div>
+    <div class="amb-thumbs"><img src="img/vila-4.jpg" alt="" loading="lazy"><img src="img/vila-3.jpg" alt="" loading="lazy"></div>
+  </article>
+  <article class="amb amb-2">
+    <img class="amb-bg" src="img/salao-1.jpg" alt="Salão interno da Notizia" loading="lazy">
+    <div class="amb-txt">
+      <span class="amb-n">02</span>
+      <h3>Ambiente aconchegante</h3>
+      <p>Salão coberto, mesas de madeira, flores suspensas. Pra jantar sem pressa.</p>
+    </div>
+    <div class="amb-reel"><video src="video/salao.mp4" poster="img/poster-salao.jpg" muted loop playsinline preload="none" class="lazyvid"></video></div>
+  </article>
+  <article class="amb amb-3">
+    <img class="amb-bg" src="img/bar-1.jpg" alt="Bar da Notizia" loading="lazy">
+    <div class="amb-txt">
+      <span class="amb-n">03</span>
+      <h3>Bar & drinks</h3>
+      <p>Negroni, Aperol, Moscow Mule, gin tônica e as jarras de sangria que fizeram fama.</p>
+      <a class="link-arrow" href="#cardapio" data-goto="drinks">ver drinks →</a>
+    </div>
+    <div class="amb-reel"><video src="video/drinks.mp4" poster="img/poster-drinks.jpg" muted loop playsinline preload="none" class="lazyvid"></video></div>
+  </article>
+</section>
+
+<!-- 7. PASSATEMPO -->
+<section class="sec kraft passatempo" id="passatempo" data-hd="paper">
+  <div class="wrap pass-wrap">
+    <div class="pass-copy">
+      <span class="sec-n">p. 7 · Passatempo</span>
+      <div class="arrow-tag">Caça palavras</div>
+      <h2 class="h2">O jogo da mesa, agora aqui.</h2>
+      <p>Igual ao jogo americano que chega na sua mesa: encontre as palavras escondidas enquanto a pizza não sai do forno. Arraste de uma letra até a outra.</p>
+      <ul class="words" id="words"></ul>
+      <div class="pass-done" id="passDone" hidden>
+        <p class="pass-done-t">Bravo!</p>
+        <p>Agora só falta a pizza.</p>
+        <a class="btn js-reserva" href="#" target="_blank" rel="noopener">Reservar mesa</a>
+      </div>
+    </div>
+    <div class="grid-box">
+      <div class="ws" id="ws" aria-label="Caça palavras"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. COLUNA SOCIAL -->
+<section class="sec paper social" id="social" data-hd="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-n">p. 8</span>
+      <span class="kicker">Coluna social</span>
+      <span class="sec-n">29 de maio de 2024</span>
+    </div>
+    <div class="clipping reveal">
+      <figure><img src="img/famosos.jpg" alt="Convidados famosos na Notizia" loading="lazy"></figure>
+      <div class="clipping-txt">
+        <h2 class="h3">Famosos curtem noite agradável na Pizzaria Notizia</h2>
+        <p class="clipping-sub">Dentre eles estavam Aritana Maroni, Tania Oliveira, Jamm, Apolo e Lhuis Mattos.</p>
+        <p>Um grupo de famosos curtiu uma noite especial na Notizia, considerada a melhor pizza napoletana de São Paulo, localizada em uma vila charmosa no Itaim Bibi.</p>
+        <p>Pizzas, drinks e jarras de sangria. Os convidados elogiaram a qualidade das pizzas, preparadas com produtos de primeira, o atendimento impecável e o lugar: o cenário perfeito para encontros entre amigos, em um ambiente familiar e altamente instagramável.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. EVENTOS -->
+<section class="sec night eventos" id="eventos" data-hd="night">
+  <div class="wrap ev-wrap">
+    <div class="ev-copy">
+      <p class="kicker kicker-light">p. 9 · Serviços</p>
+      <h2 class="h2 h2-light">Sua festa vira notícia.</h2>
+      <p>Corporativo, social ou casa fechada só pra você. Conta pra gente o que você imagina e a equipe responde no WhatsApp.</p>
+      <img src="img/mesa.jpg" alt="Mesa posta com pizza, burrata e vinho" class="ev-photo" loading="lazy">
+    </div>
+    <form class="ev-form" id="evForm">
+      <fieldset>
+        <legend>Tipo de evento</legend>
+        <div class="ev-types">
+          <label><input type="radio" name="tipo" value="Evento corporativo" checked><span><b>01</b>Corporativo<small>Workshop, reuniões, final de ano, palestras, propaganda</small></span></label>
+          <label><input type="radio" name="tipo" value="Evento social"><span><b>02</b>Social<small>Aniversários, despedidas, jantares, reencontros</small></span></label>
+          <label><input type="radio" name="tipo" value="Evento fechado"><span><b>03</b>Fechado<small>A casa reservada pra sua festa exclusiva</small></span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Ocasião</legend>
+        <div class="chips" id="chips"></div>
+      </fieldset>
+      <div class="ev-row">
+        <label class="fld"><span>Data</span><input type="date" name="data" id="evData"></label>
+        <label class="fld"><span>Convidados</span>
+          <div class="stepper"><button type="button" data-step="-5">−</button><input type="number" name="pessoas" id="evPessoas" value="20" min="2" max="400" inputmode="numeric"><button type="button" data-step="5">+</button></div>
+        </label>
+      </div>
+      <label class="fld"><span>Seu nome</span><input type="text" name="nome" id="evNome" placeholder="Como podemos te chamar?" autocomplete="name"></label>
+      <label class="fld"><span>Algum detalhe?</span><textarea name="obs" id="evObs" rows="2" placeholder="Horário, cardápio, decoração..."></textarea></label>
+      <button class="btn btn-red btn-full" type="submit">Enviar pelo WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- 10. EXPEDIENTE -->
+<footer class="ft paper" id="contato" data-hd="paper">
+  <div class="wrap">
+    <div class="ft-mast">
+      <img src="img/logo-dark.png" alt="Notizia Pizzaria & Forneria Napoletana" class="ft-logo" loading="lazy">
+    </div>
+    <div class="rule2"></div>
+    <div class="ft-grid">
+      <div>
+        <p class="kicker">Onde</p>
+        <p class="ft-big">Rua Tabapuã, 838<br>casa 5 · Itaim Bibi</p>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Rua+Tabapu%C3%A3+838+Itaim+Bibi+S%C3%A3o+Paulo" target="_blank" rel="noopener">abrir no mapa →</a>
+      </div>
+      <div>
+        <p class="kicker">Quando</p>
+        <p class="ft-big">Terça a domingo<br>18h às 00h</p>
+        <p class="status status-ft js-status"><b></b><em>Forno aceso</em></p>
+      </div>
+      <div>
+        <p class="kicker">Fale com a gente</p>
+        <p class="ft-links">
+          <a class="js-reserva" href="#" target="_blank" rel="noopener">WhatsApp (11) 99246-8807</a>
+          <a href="https://www.instagram.com/notiziapizzaria/" target="_blank" rel="noopener">Instagram @notiziapizzaria</a>
+          <span>Também no iFood, pra pedir em casa.</span>
+        </p>
+      </div>
+      <div>
+        <p class="kicker">Expediente</p>
+        <p class="ft-team">Time Notizia: Rafael Aparecido, Júlio Gabriel, Renato e Fernanda.</p>
+        <img src="img/peels.png" alt="" class="ft-peels" loading="lazy">
+      </div>
+    </div>
+    <div class="rule1"></div>
+    <p class="ft-small"><span>© <span class="js-year"></span> Notizia Pizzaria Napoletana</span><span>Aqui tudo acaba em pizza.</span></p>
+  </div>
+</footer>
+
+<a class="wa-float js-reserva" href="#" target="_blank" rel="noopener" aria-label="Reservar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+</a>
+
+<script src="main.js?v=2"></script>
+</body>
+</html>
